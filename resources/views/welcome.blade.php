@@ -62,20 +62,30 @@
 <div class="div-2 cta">
     <div class="flex-container">
         <div class="flex-item cta">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,</p>
+        <h3>Weight Loss</h3>
+            <p>Achieve your weight loss goals effortlessly with our chef-crafted, nutritionist-approved meal plan subscription, delivering delicious, healthy meals straight to your door</p>
+            <p><strong>P3000.00/2 weeks</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>Free consultation and close monitoring from our Registered Nutritionist Dietitian</li>
+                    <li><i class="fas fa-check"></i>Calorie-counted plant-based lunch and dinner from Mondays to Fridays</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for everyday breakfast</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for weekends</li>
+                    <li><i class="fas fa-check"></i>Free Delivery within Dumaguete City</li>
+                </ul>
                  <button type="submit" class="btn btn-success" style="width: 200px; border-radius: 0; background-color: #52634f;">Inquire Now</button>
 
         </div>
         <div class="flex-item cta">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,</p>
+        <h3>Weight Gain</h3>
+                <p>Indulge in hearty, plant-based dishes packed with protein and nutrients at our restaurant, where every meal is crafted to help you gain weight healthily and deliciously</p>
+                <p><strong>P3000.00/2 weeks</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>Free consultation and close monitoring from our Registered Nutritionist Dietitian</li>
+                    <li><i class="fas fa-check"></i>Calorie-counted plant-based lunch and dinner from Mondays to Fridays</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for everyday breakfast</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for weekends</li>
+                    <li><i class="fas fa-check"></i>Free Delivery within Dumaguete City</li>
+                </ul>
                  <button type="submit" class="btn btn-success" style="width: 200px; border-radius: 0; background-color: #52634f;">Inquire Now</button>
 
         </div>
@@ -84,20 +94,30 @@
 <div class="div-2 cta">
     <div class="flex-container">
         <div class="flex-item">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,</p>
+        <h3>Therapeutic Diet</h3>
+                <p>Experience the healing power of food with our therapeutic diet, featuring carefully curated meals designed to support your unique health needs and promote overall wellness</p>
+                <p><strong>P3500.00/2 weeks</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>Free consultation and close monitoring from our Registered Nutritionist Dietitian</li>
+                    <li><i class="fas fa-check"></i>Calorie-counted plant-based lunch and dinner from Mondays to Fridays</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for everyday breakfast</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for weekends</li>
+                    <li><i class="fas fa-check"></i>Free Delivery within Dumaguete City</li>
+                </ul>
                  <button type="submit" class="btn btn-success" style="width: 200px; border-radius: 0; background-color: #52634f;">Inquire Now</button>
 
         </div>
         <div class="flex-item">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,</p>
+        <h3>Gluten Free Diet</h3>
+                <p>Savor the freedom of delicious, gluten-free dining with our menu of flavorful, carefully crafted dishes that prioritize taste and your health</p>
+                <p><strong>P3500.00/2 weeks</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>Free consultation and close monitoring from our Registered Nutritionist Dietitian</li>
+                    <li><i class="fas fa-check"></i>Calorie-counted plant-based lunch and dinner from Mondays to Fridays</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for everyday breakfast</li>
+                    <li><i class="fas fa-check"></i>Meal plan guide for weekends</li>
+                    <li><i class="fas fa-check"></i>Free Delivery within Dumaguete City</li>
+                </ul>
                  <button type="submit" class="btn btn-success" style="width: 200px; border-radius: 0; background-color: #52634f;">Inquire Now</button>
 
         </div>
@@ -107,7 +127,7 @@
 <!--testimonial-->
 <div style = "height: 7vh;"></div>
 <div class="container">
-    <h1 class ="title4"><b>Centered Heading</b></h1>
+    <h1 class ="title4"><b>Testimonials</b></h1>
 </div>
 
 <div class="div-2">
