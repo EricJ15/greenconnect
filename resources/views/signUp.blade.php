@@ -21,7 +21,7 @@
       <p>GREEN CHEF'S PORTAL TO NUTRITION</p>
       <p>Already have an account?</p>
       <button>Sign In</button>
-    </div>
+</div>
 
     <!-- Step 1: Basic Information Form -->
     <div class="right-panel" id="step1">
