@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.header .user-icon {
+    font-size: 24px;
+}
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+.tabs button {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+}
+.tabs button.active {
+    background-color: #0fbb7c;
+    color: white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f9f9f9;
+}

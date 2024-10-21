@@ -16,172 +16,280 @@
 
 <div class="container">
     <div class="left-panel">
-      <img alt="Green Chef Logo" height="100" src="https://storage.googleapis.com/a1aa/image/5ZVSiXJk97ooLNVVlietIe85bAyorQ641AarmzfLZ1jPFJHnA.jpg" width="100" />
+      <img alt="Green Chef Logo" height="100" src="" width="100" />  <!-- LOGO MISSING PA --> 
       <h1>WELCOME TO GREEN CONNECT</h1>
       <p>GREEN CHEF'S PORTAL TO NUTRITION</p>
       <p>Already have an account?</p>
       <button>Sign In</button>
     </div>
 
-    <!-- Step 1: Basic Information Form -->
-    <div class="right-panel" id="step1">
-      <h2>Diet Program</h2>
-      <form>
+    <form method="POST" action="{{ route('signUp') }}">
+        @csrf
+      <div class="right-panel" id="step1">
+        <!-- Step 1: Diet Program Information -->
+        <h2>Diet Program</h2>
         <div class="form-group full-width">
-          <select>
-            <option>Diet Program</option>
-          </select>
+            <label>Diet Program<span> *</span></label>
+            <select name="diet_program" required>
+                <option value="">Select Diet Program</option>
+                <option value="weight_loss">Weight Loss Diet</option>
+                <option value="weight_gain">Weight Gain Diet</option>
+                <option value="gluten_free">Gluten-Free Diet</option>
+                <option value="therapeutic">Therapeutic Diet</option>
+            </select>
         </div>
         <div class="form-group">
-          <label>First Name*</label>
-          <input type="text" />
+            <label class="required">First Name<span> *</span></label>
+            <input type="text" name="first_name" required />
         </div>
         <div class="form-group">
-          <label>Last Name*</label>
-          <input type="text" />
+            <label class="required">Last Name<span> *</span></label>
+            <input type="text" name="last_name" required />
         </div>
         <div class="form-group">
-          <label>Sex :</label>
-          <input name="sex" type="radio" /> Male
-          <input name="sex" type="radio" /> Female
+            <label>Sex :</label><br />
+            Male
+            <input name="sex" type="radio" value="Male" required />
+            Female 
+            <input name="sex" type="radio" value="Female" required /> 
         </div>
         <div class="form-group">
-          <label>Age:</label>
-          <input type="text" />
+            <label>Age:</label>
+            <input type="text" name="age" />
         </div>
         <div class="form-group">
-          <label>Height:</label>
-          <input placeholder="cm" type="text" />
+            <label>Height:</label>
+            <input name="height" placeholder="cm" type="text" />
         </div>
         <div class="form-group">
-          <label>Weight:</label>
-          <input placeholder="kg" type="text" />
-        </div>
-        <div class="form-group full-width">
-          <label>Delivery Address*</label>
-          <input type="text" />
-        </div>
-        <div class="form-group full-width">
-          <label>Contact Number*</label>
-          <input type="text" />
-        </div>
-        <div class="form-group full-width">
-          <label>Doctor's Diet Recommendation</label>
-          <input type="text" />
+            <label>Weight:</label>
+            <input name="weight" placeholder="kg" type="text" />
         </div>
         <div class="form-group full-width">
-          <button type="button" onclick="showNextStep(2)">Next Page</button>
+            <label class="required">Delivery Address<span> *</span></label>
+            <input type="text" name="delivery_address" required />
         </div>
-      </form>
+        <div class="form-group full-width">
+            <label class="required">Contact Number<span> *</span></label>
+            <input type="text" name="contact_number" required />
+        </div>
+        <div class="form-group full-width">
+            <label>Doctor's Diet Recommendation</label>
+            <input type="text" name="doctor_recommendation" />
+        </div>
+        <br />
+        <div class="form-group full-width">
+            <button type="button" onclick="showNextStep(2)">Next Page</button>
+        </div>
     </div>
+        <div class="right-panel hidden" id="step2">
+          <h2>Allergies</h2>
+          <div class="form-group full-width">
+              <div class="allergies-grid">
+                  <div class="checkbox-group">
+                      
+                      <label>Legume</label>
+                      <select name="legume_source">
+                          <option value="">Select Source</option>
+                          <option value="Peanut">Peanut</option>
+                          <option value="Soybean">Soybean</option>
+                          <option value="Green Peas">Green Peas</option>
+                          <option value="Lentils">Lentils</option>
+                          <option value="Chickpeas">Chickpeas</option>
+                      </select>
+                      <input type="checkbox" name="allergies[legume]" />
+                  </div>
+                  <div class="checkbox-group">
+                    <label>Poultry</label>
+                    <select>
+                    <option value="">Select Source</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Duck">Duck</option>
+                    <option value="Quail">Quail</option>
+                    </select>
+                    <input type="checkbox" name="allergies[poultry]" />
+                  </div>
+            <div class="checkbox-group">
+    
+             <label>Tree nut</label>
+             <select>
+                <option value="">Select Source</option>
+               <option value="Almond">Almond</option>
+             <option value="Cashew">Cashew</option>
+             <option value="Walnut">Walnut</option>
+             <option value="Pecan">Pecan</option>
+             <option value="Pistachio">Pistachio</option>
+            </select>
+            <input type="checkbox" name="allergies[treenut]" />
+            </div>
+            <div class="checkbox-group">
+             <label>Seed</label>
+            <select>
+        <option value="">Select Source</option>
+        <option value="Sesame">Sesame</option>
+        <option value="Sunflower">Sunflower</option>
+        <option value="Poppy">Poppy</option>
+        <option value="Pumpkin">Pumpkin</option>
+        <option value="Flax">Flax</option>
+            </select>
+            <input type="checkbox" name="allergies[seed]" />
+            </div>
+<div class="checkbox-group">
+    
+    <label>Crustacean</label>
+    <select>
+        <option value="">Select Source</option>
+        <option value="Shrimp">Shrimp</option>
+        <option value="Lobster">Lobster</option>
+        <option value="Crab">Crab</option>
+        <option value="Prawns">Prawns</option>
+    </select>
+    <input type="checkbox" name="allergies[crustacean]" />
+</div>
+<div class="checkbox-group">
+    
+    <label>Fruit</label>
+    <select>
+        <option value="">Select Source</option>
+        <option value="Banana">Banana</option>
+        <option value="Apple">Apple</option>
+        <option value="Peach">Peach</option>
+        <option value="Kiwi">Kiwi</option>
+        <option value="Strawberry">Strawberry</option>
+    </select>
+    <input type="checkbox" name="allergies[fruit]" />
+</div>
+<div class="checkbox-group">
+    
+    <label>Cereal Grain</label>
+    <select>
+        <option value="">Select Source</option>
+        <option value="Wheat">Wheat</option>
+        <option value="Barley">Barley</option>
+        <option value="Oats">Oats</option>
+        <option value="Rye">Rye</option>
+        <option value="Corn">Corn</option>
+    </select>
+    <input type="checkbox" name="allergies[cerealgrain]" />
+</div>
+<div class="checkbox-group">
+    
+    <label>Fish</label>
+    <select>
+        <option value="">Select Source</option>
+        <option value="Salmon">Salmon</option>
+        <option value="Tuna">Tuna</option>
+        <option value="Cod">Cod</option>
+        <option value="Haddock">Haddock</option>
+        <option value="Mackerel">Mackerel</option>
+    </select>
+    <input type="checkbox" name="allergies[fish]" />
+</div>
+<div class="checkbox-group">
+    
+    <label>Mollusk</label>
+    <select>
+        <option value="">Select Source</option>
+        <option value="Clams">Clams</option>
+        <option value="Oysters">Oysters</option>
+        <option value="Scallops">Scallops</option>
+        <option value="Mussels">Mussels</option>
+        <option value="Squid">Squid</option>
+    </select>
+    <input type="checkbox" name="allergies[mollusk]" />
+    
+</div>
 
-    <!-- Step 2: Allergies Form -->
-    <div class="right-panel hidden" id="step2">
-      <h2>Allergies</h2>
-      <form>
+                  <!-- Repeat for other allergies -->
+        </div>
+    </div>
+          <div class="form-group full-width">
+              <label for="food_preference">Food Preference:</label>
+              <select id="food_preference" name="food_preference" required>
+                  <option value="">Select Food Preference</option>
+                  <option value="Pork">Pork</option>
+                  <option value="Beef">Beef</option>
+                  <option value="Fruit">Fruit</option>
+                  <option value="Fish">Fish</option>
+                  <option value="Vegetable">Vegetable</option>
+              </select>
+          </div>
+          
         <div class="form-group full-width">
-          <label>Allergies:</label>
-          <div class="allergies-grid">
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Legume</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Poultry</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Tree nut</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Seed</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Crustacean</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Fruit</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Cereal Grain</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Fish</label>
-              <select><option>Source</option></select>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" />
-              <label>Mollusk</label>
-              <select><option>Source</option></select>
-            </div>
+            <button type="button" onclick="showPreviousStep(2)">Back</button>
+        </div>
+</div>
+        <div class="right-panel hidden" id="step3">
+          <h2>Account and Payment</h2>
+          <div class="form-group">
+              <label class="required">Username<span>*</span></label>
+              <input type="text" name="username" required />
+          </div>
+          <div class="form-group">
+              <label class="required">Password<span> *</span></label>
+              <input type="password" name="password" required />
+          </div>
+          <div class="form-group">
+              <label class="required">Payment Option<span> *</span></label>
+              <select name="payment_method" required>
+                  <option value="">Select Payment Method</option>
+                  <option value="credit_card">Credit Card</option>
+                  <option value="gcash">Gcash</option>
+                  <option value="maya">Maya</option>
+                  <option value="bank_transfer">Bank Transfer</option>
+                  <option value="cash">Cash</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label class="required">Ref Number<span> *</span></label>
+              <input type="text" name="ref_number" required />
+          </div>
+          <br />
+          <div class="form-group full-width">
+              <button type="submit">Proceed</button>
+          </div>
+          <div class="form-group full-width">
+          <button type="button" onclick="showPreviousStep(3)">Back</button>
           </div>
         </div>
-        <div class="form-group full-width">
-          <button type="button" onclick="showNextStep(3)">Next Page</button>
-        </div>
-      </form>
-    </div>
-
-    <!-- Step 3: Username, Password, Payment -->
-    <div class="right-panel hidden" id="step3">
-      <h2>Account and Payment</h2>
-      <form>
-        <div class="form-group">
-          <label>Username*</label>
-          <input type="text" />
-        </div>
-        <div class="form-group">
-          <label>Password*</label>
-          <input type="password" />
-        </div>
-        <div class="form-group">
-          <label>Payment Option*</label>
-          <select>
-            <option>Select Payment Method</option>
-            <option>Credit Card</option>
-            <option>PayPal</option>
-            <option>Bank Transfer</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Ref Number*</label>
-          <input type="text" />
-        </div>
-        <div class="form-group full-width">
-          <button type="submit">Proceed</button>
-        </div>
-      </form>
-    </div>
+      </div>
+          <br />
+        <br />
+        
+      </div>
+        
+          
+      </div>
+     </form>
   </div>
+</div>
 
-  <script>
-    // Function to move to the next step of the form
-    function showNextStep(stepNumber) {
-      // Hide all steps
-      document.getElementById('step1').classList.add('hidden');
-      document.getElementById('step2').classList.add('hidden');
-      document.getElementById('step3').classList.add('hidden');
+</div>
 
-      // Show the selected step
-      document.getElementById('step' + stepNumber).classList.remove('hidden');
+
+ 
+<script>
+     function showNextStep() {
+        
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('step2').classList.remove('hidden');
+        document.getElementById('step3').classList.remove('hidden');
+        
+       
     }
-  </script>
+
+    function showPreviousStep() {
+       
+        document.getElementById('step1').classList.remove('hidden');
+        document.getElementById('step2').classList.add('hidden');
+        document.getElementById('step3').classList.add('hidden');
+    }
+</script>
 
 <!-- Bootstrap JS and dependencies (optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

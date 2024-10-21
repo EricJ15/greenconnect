@@ -13,3 +13,14 @@ Route::get('/login', function () {
 Route::get('/signUp', function () {
     return view('signUp');
 })->name('signUp');
+
+
+Route::get('/subscribers', function () {
+    return view('subscribers');
+})->name('subscribers');
+
+Route::get('/mealsetter', function () {
+    return view('mealsetter');
+})->name('mealsetter');
+
+?> 

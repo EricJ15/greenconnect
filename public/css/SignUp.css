@@ -12,16 +12,18 @@
            }
            .container {
                display: flex;
-               width: 50%;
+               width: 100%;
                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-               height:100%;
+               height:100vh;
+               
+              
            }
            .left-panel {
             background: rgb(249,249,249);
             background: linear-gradient(90deg, rgba(249,249,249,1) 1%, rgba(36,173,123,1) 100%);
                 color: #202020;
                padding: 40px;
-               width: 40%;
+               width: 20%;
                text-align: center;
                display: flex;
                flex-direction: column;
@@ -55,75 +57,99 @@
 	        text-transform: uppercase;
 	        transition: transform 80ms ease-in;
            }
-           .right-panel {
-               background-color: white;
-               padding: 40px;
-               width: 60%;
+           form{
+            width:30%;
            }
-           .right-panel h2 {
-                font-weight: bold;
-               font-size: 18px;
-               margin-bottom: 30px;
+           form .right-panel {
+            padding: 10px;
+            width: 100%;
+            
            }
-           .right-panel form {
-               display: flex;
-               flex-wrap: wrap;
+           form.right-panel h2 {
+            font-size: 15px;
+            margin-bottom: 10px;
            }
-           .right-panel form .form-group {
-               width: 50%;
-               margin-bottom: 5px;
+           
+           form.right-panel .form-group {
+            width:100%;
+            margin-bottom: 2px;
+               
            }
-           .right-panel form .form-group.full-width {
-               width: 100%;
+           form.right-panel .form-group.full-width {
+               width:100%;
+              
            }
-           .right-panel form label {
-               display: block;
-               margin-bottom: 5px;
-               font-size: 14px;
+           form .right-panel label {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
            }
-           .right-panel form input, .right-panel form select {
-               width: 100%;
-               padding: 10px;
-               border: 1px solid #ccc;
-               border-radius: 5px;
-               font-size: 14px;
+           form .right-panel  input, .right-panel  select {
+            width: 100%;
+            padding:10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;    
            }
-           .right-panel form .checkbox-group {
-               display: flex;
-               align-items: center;
-               margin-bottom: 10px;
-               width: 100%;
+           form.right-panel  .checkbox-group {
+            display: box;
+            align-items: center;
+            margin-bottom: 0px;
+            width: 100%;
            }
-           .right-panel form .checkbox-group input {
+           form .right-panel  .checkbox-group input {
+               margin-right: auto;
+           }
+           form.right-panel  .checkbox-group label {
                margin-right: 10px;
            }
-           .right-panel form .checkbox-group label {
-               margin-right: 10px;
-           }
-           .right-panel form .checkbox-group select {
+           form .right-panel  .checkbox-group select {
                margin-left: auto;
                padding: 5px;
                font-size: 12px;
            }
-           .right-panel form .checkbox-group {
+           form.right-panel  .checkbox-group {
                border: 1px solid #ccc;
                border-radius: 2px;
                padding: 2px;
-               margin-bottom: 10px;
+               margin-bottom: 5px;
            }
-           .right-panel form .allergies-grid {
+           form.right-panel  .allergies-grid {
                display: grid;
                grid-template-columns: repeat(2, 1fr);
-               gap: 10px;
+               gap: 5px;
            }
-           .right-panel form button {
+           form .right-panel  button {
             background: rgb(249,249,249);
+            background: linear-gradient(90deg, rgba(249,249,249,1) 1%, rgba(36,173,123,1) 100%);
+               color: rgb(0, 0, 0);
+               border: none;
+               padding: 5px 15px;
+               border-radius: 5px;
+               cursor: pointer;
+               width: 100%;
+               height:50%;
+               gap:5px;
+           }
+           form .form-group.full-width button {
             background: linear-gradient(90deg, rgba(249,249,249,1) 1%, rgba(36,173,123,1) 100%);
                color: rgb(0, 0, 0);
                border: none;
                padding: 5px 10px;
                border-radius: 5px;
                cursor: pointer;
-               width: 50%;
-               height:100%;
+               width: 100%;
+               height:50%;
+               gap: 10px;
            }
+        
+span{
+    color:red;
+
+}
+.hidden{
+    display:none;
+}
+#step3{
+    float: right;
+}
